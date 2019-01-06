@@ -63,24 +63,24 @@
         padding: 0;
         background: rgba(darken($primary-color,5),0.9);
         list-style: none;
-        transform: translateY(-100%);
+        transform: translate3d(0,-100%,0);
         @include easeOut;
 
         &.show{
             //slide in from top
-            transform: translateY(0);
+            transform: translate3d(0,0,0);
         }
     }
 
     //branding side
     &-branding {
         @include easeOut;
-        transform: translateY(100%);
+        transform: translate3d(0,100%,0);
         background: rgba($primary-color, 0.9);
 
         &.show{
             //slide in from top
-            transform: translateY(0);
+            transform: translate3d(0,0,0);
         }
 
         .portrait {
@@ -94,12 +94,12 @@
     }
 
     .nav-item {
-        transform: translateX(600px);
+        transform: translate3d(600px,0,0);
         @include easeOut;
 
         &.show {
             //slide in from right
-            transform: translateX(0);
+            transform: translate3d(0,0,0);
         }
         
         &.current > a{
